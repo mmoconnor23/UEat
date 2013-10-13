@@ -22,10 +22,10 @@ terms = [' '.join(term['grams'])
 @app.route('/', methods=['GET', 'POST'])
 def hello():
 	if request.method == 'GET':
-		return render_template('index.html')
+		return redirect('form.html')
 
 	if request.method =='POST':
-		for name, school, dhall, checkedin in request.form.iteritems():
+		for name, school, rhall, shall, check in request.form.iteritems():
 		#for each pair in dictionary
 
 			hasCheckedin = col.find({'name': name})
@@ -36,8 +36,11 @@ def hello():
 					'school' : school,
 					'dhall' : NULL,
 				}
-			if checkedin == True:
-				eater['dhall'] = dhall
+			if check == true:
+				if school == 'Swarthmore':
+					eater['dhall'] = shall
+				elif school == 'Rutgers':
+					eater['dhall'] = rhall
 			else: 
 				eater['dhall'] = NULL
 		#col.insert(eater)
