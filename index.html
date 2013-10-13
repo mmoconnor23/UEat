@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html> 
   <head>
-    <title> UEat </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+  <title> UEat </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+  
+  <style>
+  .button {
+    width:100px;
+    margin: 0 0 0 7em;
+    padding-top:5px;
+    background: url(.http://www.trentheath.com/wp-content/uploads/2011/05/fb-connect-large.png) no-repeat; 
+    }
+    </style>
   </head>
   
   <body>
-    <!-- <script src="http://code.jquery.com/jquery.js"></script> -->
 
     <script src="bootstrap/bootstrap.min.js"></script>
     <img src = "logos/UEat_logo.jpg">
     <br/>
     Eat with your friends!
     <br/>
-    <a href="#"> <img src="http://www.trentheath.com/wp-content/uploads/2011/05/fb-connect-large.png"> </a>
+    
+    <div id="formWrapper">
+    <form action="../PHP/contactformprocess.php" method="post">
+    <!--<h3><a href="contact.html">Contact Us -</a></h3>-->
+    <fieldset>
+    <label class="labelOne" for="name"> Name: </label>
+            <input type="text" name="name" required/>
+            
+            <label for="email"> Email: </label>
+            <input type="email" name="email" required/>
+            
+            <label for="message"> Message: </label>
+            <textarea name="message" required></textarea>
+            
+            <fieldset>
+                <br />
+            	<input class="button" name="submit" type="submit" value="Send Email" />
+            </fieldset>
+            
+        
+        </fieldset>
+	</form>
+</div> <!-- formWrapper -->
     
   </body>
 </html>
