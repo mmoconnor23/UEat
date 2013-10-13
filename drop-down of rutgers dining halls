@@ -20,7 +20,6 @@ Select your Dining Hall:
   <option>Livingston Dining Commons</option>
   <option>Neilson Dining Hall</option>
 </select>
-<p>Your Dining Hall is: <input type="text" id="food" size="20"></p>
 </form>
 </body>
 
