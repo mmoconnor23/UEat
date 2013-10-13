@@ -44,10 +44,10 @@ def hello():
 			else: 
 				eater['dhall'] = NULL
 		#col.insert(eater)
-			col.update({'name': name}, eater, upsert = True)
+				col.update({'name': name}, eater, upsert = True)
 
 		 # redirect to the results page
-         	return redirect(url_for('results'), dhall = dhall)
+         		return redirect(url_for('results'), dhall = eater['dhall'])
 
 
 @app.route('/results')
