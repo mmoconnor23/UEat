@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function RutgersDiningHall()
+{
+var mylist=document.getElementById("myList");
+document.getElementById("food").value=mylist.options[mylist.selectedIndex].text;
+}
+</script>
+</head>
+
+<body>
+<form>
+Select your Dining Hall:
+<select id="myList" onchange="RutgersDiningHall()">
+  <option></option>
+  <option>Brower Commons</option>
+  <option>Busch Dining Hall</option>  
+  <option>Livingston Dining Commons</option>
+  <option>Neilson Dining Hall</option>
+</select>
+<p>Your Dining Hall is: <input type="text" id="food" size="20"></p>
+</form>
+</body>
+
+</html>
