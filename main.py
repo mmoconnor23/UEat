@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from random import choice
 
 #create connection to Mongo Database
-client = MongoClient('mongodb://localhost:8080/')
+client = MongoClient()
 db= client.eaters
 col = db['eaters'] 
 #creates eater column or collection called
