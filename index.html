@@ -4,45 +4,70 @@
   <title> UEat </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
-  
   <style>
-  .button {
-    width:100px;
-    margin: 0 0 0 7em;
-    padding-top:5px;
-    background: url(.http://www.trentheath.com/wp-content/uploads/2011/05/fb-connect-large.png) no-repeat; 
+    #formWrapper {
+      width:550px;
+      margin: 2em auto 0 auto;
+      padding: 0 0 2em 0;
+      background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04qG1pzwDMN6GNq0F1mCj2ELyRRxg6PYYorJgu_T7yAvwVymEog) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      border:5px solid gray;
+    }
+    body {
+
+    }
+    #title{
+      font-family: 'Lato', sans-serif;
+      text-align: center;
+      color: black;
+    }
+    form {
+      width:500px;
+      margin: 0 auto 0 auto;
+      border:hidden;
+      color: gray;
+    }
+    label {
+      display:block;
+      margin: 0.3em 0 0.3em 2em;
+      font-family: 'Lato', sans-serif;
+      font-size: 17px;
+      font-weight:bold;
+    }
+    input {
+      width:250px;
+      margin: 0 0 1em 3.5em;
+    }
+    fieldset {
+      border:none;
+      padding: 0 0 0 2em;
     }
   </style>
-  </head>
   
   <body>
 
     <script src="bootstrap/bootstrap.min.js"></script>
     <img src = "logos/UEat_logo.jpg">
-    <br/>
-    Eat with your friends!
-    <br/>
     
     <div id="formWrapper">
-    <form action="../PHP/contactformprocess.php" method="post">
-    <!--<h3><a href="contact.html">Contact Us -</a></h3>-->
+    <br/>
+    <h2 id="title">Eat with your friends!</h2>
+    <br/>
+    <form>
+    
     <fieldset>
-    <label class="labelOne" for="name"> Name: </label>
-    <input type="text" name="name" required/>
     <label for="email"> Email: </label>
     <input type="email" name="email" required/>
-    <label for="message"> Message: </label>
-    <textarea name="message" required></textarea>
     <fieldset>
     <br />
-            	<input class="button" name="submit" type="submit" value="Send Email" />
-            </fieldset>
-            
-        
-        </fieldset>
-	</form>
-		
-	</div> <!-- formWrapper -->
-    
+    <a href="#" id="button"><img src="http://www.trentheath.com/wp-content/uploads/2011/05/fb-connect-large.png"></a>
+    </fieldset>
+    </fieldset>
+      
+    </form>
+    </div> <!-- formWrapper -->
   </body>
 </html>
