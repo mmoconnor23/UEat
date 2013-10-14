@@ -22,7 +22,7 @@ terms = [' '.join(term['grams'])
 @app.route('/', methods=['GET', 'POST'])
 def hello():
 	if request.method == 'GET':
-		return redirect('form.html')
+		return render_template('form.html')
 
 	if request.method =='POST':
 		for name, school, rhall, shall, check in request.form.iteritems():
@@ -36,24 +36,24 @@ def hello():
 					'school' : school,
 					'dhall' : NULL,
 				}
-			if check == true:
-				if school == 'Swarthmore':
+			#if check == 'Check In':
+			if school == 'Swarthmore':
 					eater['dhall'] = shall
-				elif school == 'Rutgers':
+			elif school == 'Rutgers':
 					eater['dhall'] = rhall
 			else: 
 				eater['dhall'] = NULL
 		#col.insert(eater)
-				col.update({'name': name}, eater, upsert = True)
+			col.update({'name': name}, eater, upsert = True)
 
 		 # redirect to the results page
-         		return redirect(url_for('results'), dhall = eater['dhall'])
+         	return redirect(url_for('results'), dhall = eater['dhall'])
 
 
 @app.route('/results')
 def results():
 	eaters = col.find({})
-	return render_template('results.html', html, dhall = dhall, eaters = eaters)
+	return render_template('friendsAtHall.html', html, dhall = dhall, eaters = eaters)
 	
 if __name__ == '__main__':
 	app.run()

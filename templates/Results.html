@@ -1,0 +1,10 @@
+<HI> RESULTS </HI>
+
+{% for vote in votes %}
+
+<h2>{{ vote['person'] }}</h2>
+<b>HOT:</b>{{ vote['hot'] }}
+<b>NOT:</b>{{ vote['not'] }}
+
+{% endfor %}
+
