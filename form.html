@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<script> 
+
+/*$('#
+<head>
+<title>Form</title>dropdownid').onchange(function() {
+	hall = $(this).val();
+	showDiningHall(hall)
+})
+showDiningHall(hall) {
+	$('#SwarthmoreID').addClass();
+}*/
+
+function showSwat(){
+	document.getElementById('SwarthmoreID').style.display = "inherit";
+	document.getElementById('RutgersID').style.display = "none";
+}
+function showRutgers(){
+	document.getElementById('RutgersID').style.display = "inherit";
+	document.getElementById('SwarthmoreID').style.display = "none";
+}
+function schoolSelectHandler(select){
+	if(select.value == 'Swarthmore'){
+		showSwat();
+	}
+	else if(select.value == 'Rutgers'){
+		showRutgers();
+	}
+}
+</script>
+<style>
+body{
+	background: lightblue;
+	font-family: 'Lato', sans-serif;
+}
+h3{
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+form {
+      padding-top: 50px;
+      width:500px;
+      margin: 0 auto 0 auto;
+      border:hidden;
+      color: black;
+}
+select {
+	text-align: center;
+}
+#name{
+	width: 200px;
+}
+.button {
+	width:100px;
+	margin: 0 0 0 13em;
+	padding-top:5px;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
+fieldset {
+	border:solid lightgray;
+	padding: 2em 2em 2em 2em;
+	background: #FAFAFA;
+}
+.diningMenu {
+	display: none;
+}
+#makePretty {
+	padding-top: 2em;
+}
+
+</style>
+</head>
+
+<body>
+	
+<form>
+	<fieldset>
+		<h3>Eat with Friends!</h3>
+	<table>
+	<p>Name:</p>
+	<p><input type="text" name="name" id="name" required></p> 
+	
+	
+	<tr><td>Select your school:</td></tr>
+	<tr><td><select name = 'school' onchange="schoolSelectHandler(this)">
+		<option>--- Select school ---</option>
+  		<option value="Rutgers">Rutgers University</option>
+		<option value="Swarthmore">Swarthmore College</option>  
+	</select></td></tr>
+	
+
+	<tr><td id = 'makePretty'>Select your Dining Hall:</td></tr>
+	<tr><td id="RutgersID" class="diningMenu">
+		<select name="rhall" >
+			<option>--- Select hall ---</option>
+  			<option>Brower Commons</option>
+			<option>Busch Dining Hall</option>  
+			<option>Livingston Dining Commons</option>
+			<option>Neilson Dining Hall</option>
+		</select>
+	</td></tr>
+	<tr><td id="SwarthmoreID" class="diningMenu ">
+		<select name="shall">
+			<option>--- Select hall ---</option>
+  			<option>Sharples</option>
+			<option>Essie's</option>  
+			<option>Sci Center</option>
+			<option>Kohlberg</option>
+			<option>Ville</option>
+		</select>
+	</td></tr>
+</table>
+	<p>Meal time: <input type="time" name="start"> to <input type="time" name="finish" required /></p>
+	</fieldset>
+
+	<br />
+    <input align="center" class="button" name="check" type="submit" value="Check in"/>
+
+</form>
+</body>
+
+</html>
