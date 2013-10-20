@@ -1,73 +1,67 @@
 <!DOCTYPE html>
-<html> 
-  <head>
-  <title> UEat </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
-  <style>
-    #formWrapper {
-      width:550px;
-      margin: 2em auto 0 auto;
-      padding: 0 0 2em 0;
-      background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04qG1pzwDMN6GNq0F1mCj2ELyRRxg6PYYorJgu_T7yAvwVymEog) no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      border:5px solid gray;
-    }
-    body {
+<html>
+<header>
 
-    }
-    #title{
-      font-family: 'Lato', sans-serif;
-      text-align: center;
-      color: black;
-    }
-    form {
-      width:500px;
+	<script type="text/javascript">
+	/* from http://www.davidjrush.com/blog/2011/01/javascript-creating-a-simple-textbox-watermark-with-text/*/
+	function watermark(inputId,text){
+  	var inputBox = document.getElementById(inputId);
+    if (inputBox.value.length > 0){
+    	if (inputBox.value == text)
+        	inputBox.value = '';
+    	}
+    else
+      	inputBox.value = text;
+	}
+	</script>
+
+	<style>
+	body{
+		background: #B40404;
+		font-family: 'Lato', sans-serif;
+		}
+	fieldset {
+		border:solid lightgray;
+		padding: 2em 2em 2em 2em;
+		background: #FAFAFA;
+	}
+	form {
+      padding-top:5em;
+      width:28em;
       margin: 0 auto 0 auto;
       border:hidden;
-      color: gray;
-    }
-    label {
-      display:block;
-      margin: 0.3em 0 0.3em 2em;
-      font-family: 'Lato', sans-serif;
-      font-size: 17px;
-      font-weight:bold;
-    }
-    input {
-      width:250px;
-      margin: 0 0 1em 3.5em;
-    }
-    fieldset {
-      border:none;
-      padding: 0 0 0 2em;
-    }
-  </style>
-  
-  <body>
+      color: black;
+	}
+	#inputTextboxId{
+		width: 21.5em;
+		height: 1.5em;
+		color: gray;
+		margin-left:0.5em;
+		margin-top: 1.2em;
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-size: 1em;
+	}
+	#logo{
+		height: 12em;
+		margin-left: 5.5em;
+	}
+	#button {
+		margin: 0 0 0 5.6em;
+		height: 1.5em;
+	}
+	</style>
+</header>
+<body>
+	<form>
+	<fieldset>
+		<!--<h3>Eat with Friends!</h3>-->
+		<img src="logo.jpg" id="logo" align="center">
+		<p> <input id="inputTextboxId" type="text" value="Facebook username" onfocus="watermark('inputTextboxId','Facebook username');" onblur="watermark('inputTextboxId','Facebook username');" required /></p>
+		<br />
+		<a href="#"><img src="fb.png" id="button" /></a>
+	</fieldset>
+	</form>
 
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <img src = "logos/UEat_logo.jpg">
-    
-    <div id="formWrapper">
-    <br/>
-    <h2 id="title">Eat with your friends!</h2>
-    <br/>
-    <form>
-    
-    <fieldset>
-    <label for="email"> Email: </label>
-    <input type="email" name="email" required/>
-    <fieldset>
-    <br />
-    <a href="#" id="button"><img src="http://www.trentheath.com/wp-content/uploads/2011/05/fb-connect-large.png"></a>
-    </fieldset>
-    </fieldset>
-      
-    </form>
-    </div> <!-- formWrapper -->
-  </body>
+</body>
 </html>
