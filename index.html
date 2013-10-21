@@ -32,12 +32,22 @@
       border:hidden;
       color: black;
 	}
-	#inputTextboxId{
+	#inputTextboxId1{
 		width: 21.5em;
 		height: 1.5em;
 		color: gray;
 		margin-left:0.5em;
 		margin-top: 1.2em;
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-size: 1em;
+	}
+	#inputTextboxId2{
+		width: 21.5em;
+		height: 1.5em;
+		color: gray;
+		margin-left:0.5em;
+		margin-top: 0.1em;
 		text-align: center;
 		font-family: 'Lato', sans-serif;
 		font-size: 1em;
@@ -57,7 +67,9 @@
 	<fieldset>
 		<!--<h3>Eat with Friends!</h3>-->
 		<img src="logo.jpg" id="logo" align="center">
-		<p> <input id="inputTextboxId" type="text" value="Facebook username" onfocus="watermark('inputTextboxId','Facebook username');" onblur="watermark('inputTextboxId','Facebook username');" required /></p>
+		<p> <input id="inputTextboxId1" type="text" value="Facebook username" onfocus="watermark('inputTextboxId1','Facebook username');" onblur="watermark('inputTextboxId1','Facebook username');" required />
+		<br />
+		<input id="inputTextboxId2" type="text" value="Facebook password" onfocus="watermark('inputTextboxId2','Facebook password');" onblur="watermark('inputTextboxId2','Facebook password');" required /></p>
 		<br />
 		<a href="#"><img src="fb.png" id="button" /></a>
 	</fieldset>
